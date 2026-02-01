@@ -1,15 +1,14 @@
-function startMission() {
-  alert("Clue 1: Check your pillow 😄");
-}
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
 
-function spinLottery() {
-  const prizes = [
-    "Free Hug",
-    "Movie Night",
-    "Chocolate Treat",
-    "Secret Gift Reveal!"
-  ];
+yesBtn.addEventListener("mouseover", () => {
+  yesBtn.innerText = "YES 💖💖💖";
+  yesBtn.style.background = "red";
+});
 
-  const random = prizes[Math.floor(Math.random() * prizes.length)];
-  document.getElementById("result").innerText = random;
-}
+noBtn.addEventListener("mouseover", () => {
+  noBtn.innerText = "NO 😭";
+  noBtn.style.position = "absolute";
+  noBtn.style.top = Math.random()*80 + "%";
+  noBtn.style.left = Math.random()*80 + "%";
+});
